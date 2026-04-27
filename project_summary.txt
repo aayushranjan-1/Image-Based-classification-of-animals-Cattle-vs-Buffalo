@@ -1,0 +1,27 @@
+Project Title:
+Image-Based Classification of Animals: Cattle vs Buffalo
+
+Project Type:
+Final Year Capstone Project
+
+Objective:
+To build an AI-based system that can classify animals as Cow or Buffalo using image processing and deep learning techniques.
+
+Models Used:
+- Custom CNN
+- MobileNetV2
+- ResNet50
+- CNN with Morphological Feature Fusion
+- Attention-Based CNN with CBAM
+
+Platform Used:
+Google Colab
+
+Programming Language:
+Python
+
+Libraries Used:
+PyTorch, OpenCV, NumPy, Pandas, Matplotlib, Scikit-learn
+
+Outcome:
+The project improves livestock classification accuracy and helps in smart farming and automated livestock management.
