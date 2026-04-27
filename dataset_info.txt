@@ -1,0 +1,28 @@
+Dataset Name: Cattle vs Buffalo Image Classification Dataset
+
+Classes:
+1. Cow
+2. Buffalo
+
+Dataset Type:
+Binary Image Classification
+
+Dataset Source:
+Images collected from web sources and outdoor farm environments.
+
+Dataset Features:
+- Real-world outdoor images
+- Natural lighting conditions
+- Background complexity
+- Shadows and occlusion
+- Multiple viewing angles
+
+Preprocessing Applied:
+- Image resizing to 224x224
+- Normalization using ImageNet standards
+- Removal of low-quality and corrupted images
+- Train, Validation, and Test Split
+- Data augmentation using horizontal flip and color jitter
+
+Purpose:
+The dataset is used to train deep learning models for automatic classification of cattle and buffalo images using CNN and transfer learning models.
