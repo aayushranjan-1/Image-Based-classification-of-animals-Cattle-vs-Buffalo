@@ -1,105 +1,210 @@
 🐄 Image-Based classification of animals cattle vs buffalo
-This project is a deep learning-based image classification system developed for automatic cattle breed identification using image processing and transfer learning techniques. The system helps classify different categories of cattle breeds from images using the MobileNetV2 model.
+# 🐄 Image-Based Classification of Animals: Cattle vs Buffalo
 
-This capstone project was developed as part of the final-year B.Tech Computer Science curriculum to demonstrate the practical implementation of Convolutional Neural Networks (CNN) and Transfer Learning in real-world agricultural and livestock applications.
+This project is a deep learning-based image classification system developed for automatic cattle and buffalo identification using image processing and transfer learning techniques. The system helps classify animals into two categories — Cow and Buffalo — from images using CNN and advanced deep learning models.
 
-📌 Project Objective
-The main objective of this project is to build an intelligent image-based classification system that can accurately identify cattle breeds from input images.
+This capstone project was developed as part of the final-year B.Tech Computer Science curriculum at Lovely Professional University under the guidance of Anchal Kaundal. The project demonstrates the practical implementation of Convolutional Neural Networks (CNN), Transfer Learning, Attention Mechanisms, and Computer Vision in real-world agricultural and livestock applications :contentReference[oaicite:0]{index=0}.
 
-Traditional manual identification of cattle breeds is time-consuming and requires expert knowledge. This system automates the process using Artificial Intelligence and Computer Vision.
+---
+
+## 📌 Project Objective
+
+The main objective of this project is to build an intelligent image-based binary classification system that can accurately identify whether the input animal image belongs to a Cow or a Buffalo.
+
+Traditional livestock identification is time-consuming and requires expert knowledge. This system automates the process using Artificial Intelligence and Deep Learning.
 
 The project aims to:
 
-Reduce manual effort in breed identification
-Improve classification accuracy using deep learning
-Support livestock management and agricultural decision-making
-Apply transfer learning for faster and more efficient model training
-🧠 Problem Statement
-Cattle breed identification plays an important role in livestock management, dairy production, breeding programs, and agricultural research.
+- Reduce manual effort in livestock identification
+- Improve classification accuracy using deep learning
+- Support livestock management and agricultural decision-making
+- Apply transfer learning for faster and more efficient model training
+- Enable future deployment on edge devices and smart farming systems
 
-Manual breed classification is often difficult because:
+---
 
-Many breeds have visually similar features
-It requires domain expertise
-Human observation may lead to errors
-Large-scale monitoring becomes difficult
-To solve this problem, this project uses image-based classification with MobileNetV2 to automatically predict the breed category from cattle images.
+## 🧠 Models Used
 
-🚀 Technologies Used
-Programming Language
-Python
-Development Platform
-Google Colab
-Libraries Used
-TensorFlow
-Keras
-NumPy
-Pandas
-Matplotlib
-OpenCV
-Scikit-learn
-Seaborn
-Version Control
-GitHub
-🗂 Dataset Used
-The dataset consists of categorized cattle breed images collected for training and testing purposes.
+This project uses multiple deep learning models for comparative analysis:
 
-Dataset Features
-Multiple cattle breed categories
-Structured image folders for each class
-Training and validation split
-Real-world image samples
-Example Breed Categories
-Gir
-Sahiwal
-Jersey
-Holstein Friesian
-Red Sindhi
-Other classified breeds
-(Note: Categories may vary depending on the dataset used.)
+### 1. Custom Baseline CNN
+A traditional Convolutional Neural Network built from scratch and trained completely on the project dataset.
 
-🏗 Model Used
-MobileNetV2 (Transfer Learning)
-This project uses MobileNetV2, a lightweight and highly efficient pre-trained Convolutional Neural Network (CNN) architecture.
+### 2. MobileNetV2 (Transfer Learning)
+A lightweight and highly efficient pretrained CNN model used for faster training and better accuracy.
 
-Why MobileNetV2?
-Faster training compared to building CNN from scratch
-Better performance on smaller datasets
-Reduced computational cost
-High accuracy with transfer learning
-Suitable for image classification tasks
-Model Workflow
-Import dataset
-Preprocess images
-Resize images
-Normalize pixel values
-Load pre-trained MobileNetV2
-Freeze base layers
-Add custom classification layers
-Train the model
-Validate performance
-Predict cattle breed from test images
-🔄 Project Workflow
-Start
-   ↓
-Dataset Collection
-   ↓
-Data Preprocessing
-   ↓
-Image Resizing & Normalization
-   ↓
-Train-Test Split
-   ↓
-Load MobileNetV2 Pretrained Model
-   ↓
-Add Custom Dense Layers
-   ↓
-Model Training
-   ↓
-Validation & Accuracy Evaluation
-   ↓
-Prediction on New Images
-   ↓
-Final Classification Result
-   ↓
+### 3. ResNet50 (Transfer Learning)
+A deep residual network used to solve vanishing gradient problems and improve feature extraction.
+
+### 4. CNN with Morphological Feature Fusion
+A hybrid model combining deep learning features with handcrafted features like HOG, aspect ratio, solidity, and spatial extent.
+
+### 5. Attention-Based CNN with CBAM
+The proposed advanced model using Convolutional Block Attention Module (CBAM) for channel attention and spatial attention to improve classification performance :contentReference[oaicite:1]{index=1}.
+
+---
+
+## 🚀 Technologies Used
+
+### Programming Language
+- Python
+
+### Development Platform
+- Google Colab
+
+### Libraries Used
+- PyTorch
+- Torchvision
+- NumPy
+- Pandas
+- Matplotlib
+- OpenCV
+- Scikit-learn
+- Seaborn
+- icrawler
+
+### Version Control
+- GitHub
+
+---
+
+## 📊 Dataset
+
+The dataset consists of real-world outdoor images of cows and buffaloes collected from web sources and farm environments.
+
+### Dataset Characteristics
+
+- Binary classification dataset
+- Two classes: Cow and Buffalo
+- Outdoor farm images
+- Images with natural lighting variations
+- Background noise, shadows, occlusion, and real-world complexity
+
+The dataset was cleaned by removing:
+
+- low-resolution images
+- corrupted files
+- indoor zoo images
+- studio-quality artificial images
+- images containing human privacy-sensitive information :contentReference[oaicite:2]{index=2}
+
+---
+
+## ⚙ Project Workflow
+
+Start  
+↓  
+Dataset Collection  
+↓  
+Data Cleaning & Preprocessing  
+↓  
+Image Resizing & Normalization  
+↓  
+Train-Test Split  
+↓  
+Model Training (5 Architectures)  
+↓  
+Validation & Evaluation  
+↓  
+Grad-CAM Visualization  
+↓  
+Final Prediction  
+↓  
 End
+
+---
+
+## 📈 Performance Evaluation
+
+The project evaluates models using:
+
+- Accuracy
+- Precision
+- Recall
+- F1 Score
+- ROC-AUC Score
+- Confusion Matrix
+- Validation Loss
+- Inference Time
+- Grad-CAM Heatmaps
+
+These metrics help compare all five models fairly under the same testing conditions :contentReference[oaicite:3]{index=3}.
+
+---
+
+## 📁 Repository Structure
+
+Image-Based-classification-of-animals-Cattle-vs-Buffalo/
+
+├── capstone.ipynb  
+├── README.md  
+├── requirements.txt  
+├── Project_Report.pdf  
+├── sample_outputs/  
+│   ├── accuracy_graph.png  
+│   ├── confusion_matrix.png  
+│   ├── prediction_result.png  
+│   └── gradcam_result.png  
+│  
+└── dataset_info.txt
+
+---
+
+## 📌 Future Scope
+
+This project can be further improved by:
+
+- Real-time cattle detection using live camera input
+- Mobile application for farmers
+- Raspberry Pi deployment for smart farms
+- Integration with IoT livestock monitoring systems
+- Multi-class breed classification
+- Vision Transformer implementation
+- EfficientNet-based optimization
+
+---
+
+## 🎓 Academic Relevance
+
+This project demonstrates practical implementation of:
+
+- Deep Learning
+- CNN
+- Transfer Learning
+- Computer Vision
+- Attention Mechanisms
+- Explainable AI (Grad-CAM)
+- Smart Agriculture Applications
+
+It is highly relevant for:
+
+- Final Year Major Project
+- Placement Portfolio
+- Resume Projects
+- GitHub Showcase
+- Technical Interviews
+
+---
+
+## 👨‍💻 Developed By
+
+Ayush Ranjan  
+B.Tech – Computer Science Engineering  
+Lovely Professional University  
+Final Year Capstone Project
+
+---
+
+## 🙏 Acknowledgement
+
+I would like to express sincere gratitude to my project guide, Anchal Kaundal, for her valuable mentorship, continuous support, and expert guidance throughout this project. Her technical insights and constructive feedback played a major role in the successful completion of this work :contentReference[oaicite:4]{index=4}.
+
+---
+
+## ⭐ Conclusion
+
+This project successfully demonstrates how Deep Learning, Transfer Learning, and Attention-Based Neural Networks can solve real-world agricultural problems.
+
+The system provides an efficient and accurate method for Cow vs Buffalo classification, reducing dependency on manual observation and improving livestock management processes.
+
+This project reflects the growing importance of AI-driven solutions in modern agriculture and precision farming.
