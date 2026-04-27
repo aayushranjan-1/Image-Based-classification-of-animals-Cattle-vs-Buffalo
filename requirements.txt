@@ -1,0 +1,19 @@
+Python 3.10 was used as the main programming language for developing the complete project.
+
+Google Colab was used as the development environment for writing, training, and testing the deep learning models with GPU support.
+
+PyTorch and Torchvision were used for building and training deep learning models such as Custom CNN, MobileNetV2, ResNet50, and Attention-Based CNN with CBAM.
+
+NumPy was used for numerical operations and handling multi-dimensional arrays during preprocessing and model training.
+
+Pandas was used for managing dataset-related operations and organizing experimental results.
+
+Matplotlib and Seaborn were used for visualizing training accuracy, validation loss graphs, confusion matrix, and performance comparison charts.
+
+OpenCV was used for image preprocessing tasks such as resizing, reading images, and feature extraction.
+
+Scikit-learn was used for model evaluation using metrics like accuracy, precision, recall, F1-score, ROC-AUC score, and confusion matrix.
+
+icrawler was used for collecting cattle and buffalo images from web sources during dataset preparation.
+
+Google Drive was used for dataset storage, model checkpoint saving, and maintaining project files during execution in Google Colab.
